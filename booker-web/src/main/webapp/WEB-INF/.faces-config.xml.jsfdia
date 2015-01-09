@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#view_patient.xhtml"
+  PATH="/view_patient.xhtml" SHAPE="416,216,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#view_patient.xhtml:0" NAME="item"
+   PATH="/view_patient.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="index::#index.xhtml" NAME="output"
+    PATH="/index.xhtml"
+    SHAPE="465,248,470,248,470,136,72,136,72,256,111,256"
+    TARGET="rules:#index.xhtml" TITLE="index" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="modify_appt::#modify_appt.xhtml"
+    NAME="output1" PATH="/modify_appt.xhtml"
+    TARGET="rules:#modify_appt.xhtml" TITLE="modify_appt" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="112,248,50,73" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="view_patient::#view_patient.xhtml"
+    NAME="output" PATH="/view_patient.xhtml"
+    SHAPE="161,280,232,280,232,224,415,224"
+    TARGET="rules:#view_patient.xhtml" TITLE="view_patient" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="view_docteur::#view_doctor.xhtml"
+    NAME="output1" PATH="/view_doctor.xhtml"
+    SHAPE="161,296,232,296,232,440,431,440"
+    TARGET="rules:#view_doctor.xhtml" TITLE="view_docteur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="datas::#datas.xhtml" NAME="output2"
+    PATH="/datas.xhtml" TARGET="rules:#datas.xhtml" TITLE="datas" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#view_doctor.xhtml" PATH="/view_doctor.xhtml"
+  SHAPE="432,432,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#view_doctor.xhtml:0" NAME="item"
+   PATH="/view_doctor.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="index::#index.xhtml" NAME="output"
+    PATH="/index.xhtml"
+    SHAPE="481,464,488,464,488,504,72,504,72,256,111,256"
+    TARGET="rules:#index.xhtml" TITLE="index" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="modify_appt::#modify_appt.xhtml"
+    NAME="output1" PATH="/modify_appt.xhtml"
+    TARGET="rules:#modify_appt.xhtml" TITLE="modify_appt" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#datas.xhtml" PATH="/datas.xhtml"
+  SHAPE="368,304,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#datas.xhtml:0" NAME="item"
+   PATH="/datas.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="index::#index.xhtml" NAME="output"
+    PATH="/index.xhtml"
+    SHAPE="417,336,504,336,504,384,72,384,72,256,111,256"
+    TARGET="rules:#index.xhtml" TITLE="index" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modify_appt.xhtml" PATH="/modify_appt.xhtml"
+  SHAPE="608,288,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

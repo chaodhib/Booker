@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    JBoss, Home of Professional Open Source
+    Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+    contributors by the @authors tag. See the copyright.txt in the
+    distribution for a full listing of individual contributors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"	
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+   template="/WEB-INF/templates/default.xhtml">
+   <ui:define name="content">
+   
+   <h1>Booker - Modification d'un rdv existantt</h1>
+   
+   	<h:form>
+   	
+      	<p:messages autoUpdate="false" globalOnly="false"/>
+      	
+       	<h3>Prendre RDV pour: (veuillez choisir un patient)</h3>
+
+		<p:selectOneMenu id="patient" value="#{appointmentController.selectedPatientName}" 
+						required="true" requiredMessage="Veuillez choisir un patient">
+	     <f:selectItem itemLabel="Choisir un patient" itemValue="" />
+	     <f:selectItems value="#{patients}" var="patient" itemLabel="#{patient.name}" />
+		</p:selectOneMenu>
+			
+ 
+	    <h3>Prendre RDV avec: (veuillez choisir UN DOCTEUR (la selection de service n'est pas admise))</h3>
+    	<p:tree value="#{doctorsTree}" var="node" dynamic="true"
+	                selectionMode="single"
+	                selection="#{appointmentController.selectedNode}"
+	                required="true"
+	                requiredMessage="Veuillez choisir un docteur">
+	
+	        <p:treeNode icon="ui-icon-home">
+	            <h:outputText value="#{node.name}" />
+	            <h:outputText value=" - Campus B" rendered="#{node.external}"/>
+	        </p:treeNode>
+	        <p:treeNode type="doctor" icon="ui-icon-person">
+	            <h:outputText value="#{node.name}" />
+	        </p:treeNode>
+	    </p:tree>
+	    
+	    <h:outputScript name="/resources/js/localisationFR.js" />
+        <h3>Prendre RDV à:</h3>
+       	<p:calendar id="datetime" value="#{appointmentController.selectedTime}" locale="fr"  
+       					pattern="MM/dd/yyyy HH:mm" required="true" requiredMessage="Veuillez choisir une date"/>
+		
+		<h3>Durée du RDV (en minutes): </h3>
+		<p:selectOneMenu id="duration" value="#{appointmentController.selectedDuration}" 
+					required="true" requiredMessage="Veuillez choisir une durée">
+            <f:selectItem itemLabel="Faite un choix" itemValue="" />
+            <f:selectItem itemLabel="30" itemValue="30" />
+            <f:selectItem itemLabel="60" itemValue="60" />
+            <f:selectItem itemLabel="90" itemValue="90" />
+            <f:selectItem itemLabel="120" itemValue="120" />
+        </p:selectOneMenu>
+        
+        
+ 		<div>
+ 			<p:commandButton value="Modifier le RDV" ajax="false" actionListener="#{appointmentController.modifyAppointment(modifyAppointment.id)}" action="#{modifyAppointment.finishMod()}"
+				icon="ui-icon-check" validateClient="true" style="margin-top:10px"> 
+			</p:commandButton>
+ 		</div>
+		
+	</h:form>
+   </ui:define>
+</ui:composition>
