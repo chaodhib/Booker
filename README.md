@@ -1,4 +1,4 @@
-* FR
+> FR
 
 Booker 
 
@@ -13,7 +13,7 @@ Celui-ci a été testé sur un serveur Wildfly (JBoss) 8.2 et emploi Maven. Il n
 
 Il n'est pas nécessaire que le projet principal soit déployé pour deployer le module et vice-versa.
 
-* EN
+> EN
 
 Booker 
 
