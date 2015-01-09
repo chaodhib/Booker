@@ -2,7 +2,7 @@
 
 Booker 
 
-Projet perso à titre d'experimentation de technologies. Technologies utilisées : JPA, EJB (dont un MDB), CDI, JSF et Primefaces.
+Projet perso à titre d'experimentation de technologies. Une architecture 3 tiers à été utiliser avec les technologies suivantes : JPA, EJB (dont un MDB), CDI, JSF, Primefaces et implémentation d'un end-point de Webservice Rest.
 
 Le projet est constitué d'un EAR (le projet principal) et d'un petit module EJB indépendant communicant avec le projet principal par JMS.
 
@@ -17,7 +17,7 @@ Il n'est pas nécessaire que le projet principal soit déployé pour deployer le
 
 Booker 
 
-I made this application to experiment with various technologies : JPA, EJB (including MDB), CDI, JSF and Primefaces.
+I made this application to experiment with various technologies : JPA, EJB (including MDB), CDI, JSF and Primefaces and Webservice Rest;
 
 The project includes one EAR (the main project) and one small EJB module which communicates with the main project using JMS.
 
