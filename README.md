@@ -2,7 +2,7 @@
 
 Booker 
 
-Projet perso à titre d'experimentation de technologies. Une architecture 3 tiers à été utiliser avec les technologies suivantes : JPA, EJB (dont un MDB), CDI, JSF, Primefaces et Webservice REST.
+Projet perso à titre d'experimentation de technologies. Une architecture 3 tiers a été utilisé avec les technologies suivantes : JPA, EJB (dont un MDB), CDI, JSF, Primefaces et Webservice REST.
 
 Le projet est constitué d'un EAR (le projet principal) et d'un petit module EJB indépendant communicant avec le projet principal par JMS.
 
@@ -11,7 +11,7 @@ Celui-ci a été testé sur un serveur Wildfly (JBoss) 8.2 et emploi Maven. Il n
 - Une JMS Connection Factory bindé à "java:/ConnectionFactory"
 - et une JMS Destination de type Queue bindé à "java:/jms/AppointmentRequestQueue".
 
-Il n'est pas nécessaire que le projet principal soit déployé pour deployer le module et vice-versa.
+Il n'est pas nécessaire que le projet principal soit déployé pour deployer le module externe et vice-versa.
 
 > EN
 
