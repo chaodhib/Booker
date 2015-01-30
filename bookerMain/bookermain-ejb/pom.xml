@@ -18,15 +18,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>booker</artifactId>
+        <artifactId>bookermain</artifactId>
         <groupId>be.chaouki</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>booker-ejb</artifactId>
+    <artifactId>bookermain-ejb</artifactId>
     <packaging>ejb</packaging>
 
-    <name>booker: EJB Module</name>
+    <name>bookerMain: EJB Module</name>
 
     <url>http://wildfly.org</url>
     <licenses>

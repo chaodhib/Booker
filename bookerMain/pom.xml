@@ -17,10 +17,10 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <name>booker</name>
+    <name>bookermain</name>
     <modelVersion>4.0.0</modelVersion>
     <groupId>be.chaouki</groupId>
-    <artifactId>booker</artifactId>
+    <artifactId>bookermain</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -33,9 +33,9 @@
         </license>
     </licenses>
     <modules>
-        <module>booker-ejb</module>
-        <module>booker-web</module>
-        <module>booker-ear</module>
+        <module>bookermain-ejb</module>
+        <module>bookermain-web</module>
+        <module>bookermain-ear</module>
     </modules>
 
     <properties>
@@ -75,7 +75,7 @@
                 to repeat ourselves in every module -->
             <dependency>
                 <groupId>be.chaouki</groupId>
-                <artifactId>booker-ejb</artifactId>
+                <artifactId>bookermain-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -84,7 +84,7 @@
                 ourselves in every module -->
             <dependency>
                 <groupId>be.chaouki</groupId>
-                <artifactId>booker-web</artifactId>
+                <artifactId>bookermain-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>

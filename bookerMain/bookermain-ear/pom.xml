@@ -18,15 +18,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>booker</artifactId>
+        <artifactId>bookermain</artifactId>
         <groupId>be.chaouki</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>booker-ear</artifactId>
+    <artifactId>bookermain-ear</artifactId>
     <packaging>ear</packaging>
 
-    <name>booker: EAR Module</name>
+    <name>bookerMain: EAR Module</name>
 
     <url>http://wildfly.org</url>
     <licenses>
@@ -42,12 +42,12 @@
         <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>be.chaouki</groupId>
-            <artifactId>booker-web</artifactId>
+            <artifactId>bookermain-web</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>be.chaouki</groupId>
-            <artifactId>booker-ejb</artifactId>
+            <artifactId>bookermain-ejb</artifactId>
             <type>ejb</type>
         </dependency>
     </dependencies>
