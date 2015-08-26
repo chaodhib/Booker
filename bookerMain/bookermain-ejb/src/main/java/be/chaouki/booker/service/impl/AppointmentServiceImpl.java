@@ -32,7 +32,19 @@ public class AppointmentServiceImpl implements AppointmentService {
 	
 	@Inject private Logger logger;
 	
-	private final int APPOINTMENT_DURATION_LIMIT=120; // duree limite du rdv en minutes
+	public final static int APPOINTMENT_DURATION_LIMIT=120; // duree limite du rdv en minutes
+	
+	public AppointmentServiceImpl() {}
+
+	// for unit testing
+	public AppointmentServiceImpl(AppointmentDAO appointmentDAO, PatientDAO patientDAO, DoctorDAO doctorDAO,
+			MessagingService messagingService) {
+		super();
+		this.appointmentDAO = appointmentDAO;
+		this.patientDAO = patientDAO;
+		this.doctorDAO = doctorDAO;
+		this.messagingService = messagingService;
+	}
 
 	@Override
 	public boolean registerAppointment(Patient patient, Doctor doctor, Calendar time, Integer duration) {
