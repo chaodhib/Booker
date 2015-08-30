@@ -10,6 +10,9 @@ import be.chaouki.booker.entities.Department;
 
 public interface AppointmentService {
 	
+
+	public final static int APPOINTMENT_DURATION_LIMIT=120; // in minutes
+	
 	/** <p><b>FR:</b> Enregistrement d'un nouveau rdv.</p>
 	 *  
 	 *  <p><b>EN:</b> Attempt to register a new appointment. Returns true if the attempt succeeded. False if
